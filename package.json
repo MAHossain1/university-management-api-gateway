@@ -5,7 +5,7 @@
   "author": "Programming Hero",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec 'ts-node' -T ./src/server.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.spec.ts' --exec ts-node -T ./src/server.ts",
     "build": "tsc"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.4",
     "@types/multer": "^1.4.7",
-    "@types/node": "^18.16.3",
+    "@types/node": "^20.14.0",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "cross-env": "^7.0.3",
@@ -48,11 +48,11 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "fs": "^0.0.1-security",
-    "nodemon": "^2.0.22",
+    "nodemon": "2.0.22",
     "path": "^0.12.7",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   }
 }
