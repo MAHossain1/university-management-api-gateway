@@ -1,5 +1,4 @@
 import axios, { AxiosInstance } from 'axios';
-import { rejections } from 'winston';
 import config from '../config';
 
 const HttpService = (baseUrl: string): AxiosInstance => {
@@ -35,4 +34,4 @@ const HttpService = (baseUrl: string): AxiosInstance => {
 const AuthService = HttpService(config.authServiceUrl);
 const CoreService = HttpService(config.coreServiceUrl);
 
-export { HttpService, AuthService, CoreService };
+export { AuthService, CoreService, HttpService };
