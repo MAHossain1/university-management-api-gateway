@@ -8,6 +8,8 @@ import { courseRoutes } from '../modules/course/course.routes';
 import { offeredCourseRoutes } from '../modules/offeredCourse/offeredCourse.routes';
 import { offeredCourseClassScheduleRoutes } from '../modules/offeredCourseClassSchedule/offeredCourseClassSchedule.routes';
 import { offeredCourseSectionRoutes } from '../modules/offeredCourseSection/offeredCourseSection.routes';
+import { studentEnrolledCourseRoutes } from '../modules/studentEnrolledCourse/studentEnrolledCourse.routes';
+import { semesterRegistrationRoutes } from '../modules/semesterRegistration/semesterRegistration.routes';
 
 const router = express.Router();
 
@@ -50,7 +52,11 @@ const moduleRoutes = [
   },
   {
     path: '/semester-registrations',
-    route: offeredCourseSectionRoutes
+    route: semesterRegistrationRoutes
+  },
+  {
+    path: '/student-enrolled-courses',
+    route: semesterRegistrationRoutes
   }
 ];
 
