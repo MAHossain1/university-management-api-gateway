@@ -1,15 +1,16 @@
 import express from 'express';
-import { AcademicSemesterRoutes } from '../modules/academicSemester/academicSemester.routes';
 import { AcademicDepartmentRoutes } from '../modules/academicDepartment/academicDepartment.routes';
 import { AcademicFacultyRoutes } from '../modules/academicFaculty/academicFaculty.routes';
+import { AcademicSemesterRoutes } from '../modules/academicSemester/academicSemester.routes';
 import { buildingRoutes } from '../modules/buildings/building.routes';
-import { roomRoutes } from '../modules/room/room.routes';
 import { courseRoutes } from '../modules/course/course.routes';
 import { offeredCourseRoutes } from '../modules/offeredCourse/offeredCourse.routes';
 import { offeredCourseClassScheduleRoutes } from '../modules/offeredCourseClassSchedule/offeredCourseClassSchedule.routes';
 import { offeredCourseSectionRoutes } from '../modules/offeredCourseSection/offeredCourseSection.routes';
-import { studentEnrolledCourseRoutes } from '../modules/studentEnrolledCourse/studentEnrolledCourse.routes';
+import { roomRoutes } from '../modules/room/room.routes';
 import { semesterRegistrationRoutes } from '../modules/semesterRegistration/semesterRegistration.routes';
+import { studentEnrolledCourseRoutes } from '../modules/studentEnrolledCourse/studentEnrolledCourse.routes';
+import { studentEnrolledCourseMarkRoutes } from '../modules/studentEnrolledCourseMark/studentEnrolledCourseMark.routes';
 
 const router = express.Router();
 
@@ -56,7 +57,11 @@ const moduleRoutes = [
   },
   {
     path: '/student-enrolled-courses',
-    route: semesterRegistrationRoutes
+    route: studentEnrolledCourseRoutes
+  },
+  {
+    path: '/student-enrolled-course-marks',
+    route: studentEnrolledCourseMarkRoutes
   }
 ];
 
