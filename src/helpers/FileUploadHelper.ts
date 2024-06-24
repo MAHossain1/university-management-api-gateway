@@ -1,4 +1,5 @@
 import { v2 as cloudinary } from 'cloudinary';
+import multer from 'multer';
 
 // (async function () {
 // Configuration
@@ -21,6 +22,17 @@ const uploadToCloudinary = async () => {
 
 console.log(uploadToCloudinary);
 
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
+});
+
+const upload = multer({ storage: storage });
+
 // Optimize delivery by resizing and applying auto-format and auto-quality
 const optimizeUrl = cloudinary.url('shoes', {
   fetch_format: 'auto',
@@ -41,5 +53,6 @@ console.log(autoCropUrl);
 // })();
 
 export const FileUploadHelper = {
-  uploadToCloudinary
+  uploadToCloudinary,
+  upload
 };
